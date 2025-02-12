@@ -1,1 +1,24 @@
-<p>atributos-luchador works!</p>
+<div class="area-datos">
+    <h1>{{nombre}}</h1>
+    <div class="datos">
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" 
+            aria-valuemin="0" aria-valuenow="fuerza" aria-valuemax="10" style="width:{{fuerza * 10}}%;">
+              <span class="sr-only">Fuerza</span>
+            </div>
+        </div>
+    
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" 
+        aria-valuemin="0" aria-valuenow="destreza" aria-valuemax="10" style="width:{{destreza * 10}}%;">
+          <span class="sr-only">Destreza</span>
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" 
+        aria-valuemin="0" aria-valuenow="vida" aria-valuemax="10" style="width:{{vida * 10}}%;">
+          <span class="sr-only">Vida</span>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-atributos-luchador',
@@ -7,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrl: './atributos-luchador.component.scss'
 })
 export class AtributosLuchadorComponent {
+  
+  @Input() 
+  nombre: string = "";
 
+  @Input() 
+  fuerza: number = 0;
+
+  @Input() 
+  destreza: number = 0;
+  
+  @Input() 
+  vida: number = 0;
+ 
 }

@@ -13,14 +13,13 @@ export class AreaSeleccionComponent implements OnInit {
   luchadores: any[] = [];
 
   constructor(private servicioLuchadores: ServicioLuchadoresService) {}
-
   animacion: string =  "";
   fuerza: number = 0;
   destreza: number = 0;
   vida: number = 0;
   nombre: string = "";
 
-  EnvDatosLuchador(luchador:any){
+  AsignarDatosLuchador(luchador:any){
     this.animacion= luchador.animacion;
     this.fuerza= luchador.fuerza;
     this.destreza= luchador.destreza;

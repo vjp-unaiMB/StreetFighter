@@ -1,14 +1,19 @@
 
 <div class="area-seleccion container-fluid position-absolute top-50 start-50 translate-middle">
-  <div class="seleccion" >
-    <div *ngFor="let luchador of luchadores" class="imagen col-md-6" [style.background-color]="luchador.colorAsociado" (click)="EnvDatosLuchador(luchador)">
+  <div class="seleccion">
+    <div *ngFor="let luchador of luchadores" class="imagen col-md-6 border border-dark" [style.background-color]="luchador.colorAsociado" (click)="AsignarDatosLuchador(luchador)">
       <img [src]="luchador.retrato" [alt]="luchador.nombre" class="img-fluida">
     </div>
   </div>
   <div class="espacio-animacion">
     <img [src]="animacion" class="animacion">
   </div>
-  <app-atributos-luchador></app-atributos-luchador>
+  <app-atributos-luchador 
+  [nombre]="nombre"
+  [fuerza]="fuerza"
+  [destreza]="destreza"
+  [vida]="vida"
+  ></app-atributos-luchador>
 </div>
 
 
