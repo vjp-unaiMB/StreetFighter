@@ -26,7 +26,7 @@ export class AreaSeleccionComponent implements OnInit {
 
   constructor(private servicioLuchadores: ServicioLuchadoresService) {}
 
-  //Al cargar el componente se ejecuta ngOnInit para obtener los luchadores y seleccionar el primero
+  //Al cargar el componente se ejecuta ngOnInit para obtener los luchadores y llamando al método del servicio y seleccionar el primero. 
   ngOnInit(): void {
     this.luchadores = this.servicioLuchadores.getluchadores();
     if (this.luchadores.length > 0) {
@@ -55,7 +55,7 @@ export class AreaSeleccionComponent implements OnInit {
       this.seleccionarLuchador(1);
     }
   }
-  
+
   seleccionarLuchador(direccion: number) {
     this.seleccionado = (this.seleccionado + direccion + this.luchadores.length) % this.luchadores.length;
     this.AsignarDatosLuchador(this.luchadores[this.seleccionado]);
