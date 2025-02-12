@@ -1,3 +1,5 @@
+// Este servicio Importa una interfaz ILuchador y nos devolverá un array de 4 objetos de personaje al invocar al método getluchadores()
+
 import { Injectable } from '@angular/core';
 import { ILuchador } from './iluchador';
 

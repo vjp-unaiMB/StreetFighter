@@ -4,10 +4,9 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,AreaSeleccionComponent],
+  imports: [RouterOutlet,AreaSeleccionComponent], //Importamos el componente Area-Seleccion
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  title = 'Street_Fighter';
+export class AppComponent { //Dentro de la clase de este componente padre no tenemso nada porque no habrá lógica aquí.
 }

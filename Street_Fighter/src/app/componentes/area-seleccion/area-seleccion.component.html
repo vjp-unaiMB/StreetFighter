@@ -1,19 +1,27 @@
+<!-- Una vez en la vista de "area-seleccion", dividiremos el espacio en 3 columnas, "seleccion", "espacio-animaciones" y la vista del componente "app-atributos-luchador" -->
 
-<div class="area-seleccion container-fluid position-absolute top-50 start-50 translate-middle">
+<div class="area-seleccion container-fluid position-absolute top-50 start-50 translate-middle "> 
+  
+  <!-- En seleccion generaremos 4 estructuras "DIV>IMG" por cada personaje obteniendo su imagen. Al clicar en ella se desocultaran loas otras 2 columnas -->
+  <!-- Hacemos uso de una directiva *nfFOR para ello -->
   <div class="seleccion">
-    <div *ngFor="let luchador of luchadores" class="imagen col-md-6 border border-dark" [style.background-color]="luchador.colorAsociado" (click)="AsignarDatosLuchador(luchador)">
+    <div *ngFor="let luchador of luchadores; let i = index" 
+         class="imagen col-md-6" 
+         [ngClass]="{'seleccionado': i === seleccionado}" 
+         [style.background-color]="luchador.colorAsociado"
+         (click)="AsignarDatosLuchador(luchador)">
       <img [src]="luchador.retrato" [alt]="luchador.nombre" class="img-fluida">
     </div>
   </div>
-  <div class="espacio-animacion">
+
+  <div class="espacio-animacion" [style.display]="estadoDisplay">
     <img [src]="animacion" class="animacion">
   </div>
-  <app-atributos-luchador 
-  [nombre]="nombre"
-  [fuerza]="fuerza"
-  [destreza]="destreza"
-  [vida]="vida"
-  ></app-atributos-luchador>
+
+
+  <!-- Invocamos a la vista del componente hijo "atributos-Luchador" y le pasamos los datos requeridos a mostrar -->
+  <app-atributos-luchador [nombre]="nombre" [fuerza]="fuerza" [destreza]="destreza" [vida]="vida" [style.display]="estadoDisplay" ></app-atributos-luchador>
+
 </div>
 
 

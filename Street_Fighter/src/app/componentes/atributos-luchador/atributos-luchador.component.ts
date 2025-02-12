@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class AtributosLuchadorComponent {
   
+  // Importamos los atributos del luchador bindeados en la etiqueta de este componente en la vista del padre "area-seleccion" mediante @Input
   @Input() 
   nombre: string = "";
 

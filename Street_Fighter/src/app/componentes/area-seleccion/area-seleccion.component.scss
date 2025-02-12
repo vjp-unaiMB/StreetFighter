@@ -5,14 +5,15 @@
     border: 4px solid #4d3b9b;
     height: 404px;
     margin-top: 100px;
-    min-width: 1000px;
+    min-width: 1100px;
     width: 60%;
     display: flex;
 }
 .seleccion{
     display: flex;
     flex-flow: row;
-    width: 400px;
+    width: 33%;
+    min-width: 400px;
     height: 400px;
     flex-wrap: wrap; 
     
@@ -25,22 +26,25 @@
     justify-content: center; 
     align-items: center;  
 }
-img{
+
+.img-fluida{
     width: 150px;
     height: 150px;
     display: flex;
-    opacity: 1!important;
+    opacity: 1;
     justify-content: center; 
     align-items: center;  
+    border:2px solid black ;
 }
 .img-fluida:hover{
     width: 130px;
     height: 130px;
+    border: none ;
 }
 
 .espacio-animacion{
    height: 400px;
-   width:300px;
+   width:33%;
    margin: 50px 0px;
 }
 .animacion{
@@ -48,3 +52,12 @@ img{
     width: 300px;
 }
 
+app-atributos-luchador{
+    width: 33%;
+}
+
+.seleccionado img{
+    width: 130px;
+    height: 130px;
+    border: none ;
+}

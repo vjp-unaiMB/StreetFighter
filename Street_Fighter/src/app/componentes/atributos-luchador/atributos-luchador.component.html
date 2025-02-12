@@ -1,24 +1,27 @@
+<!-- En la vista del componente "atributos-luchador" generaremos un h1 con su nombre interpolado  + 3 barras de estadísticas y les pasaremos por Data-Binding  los estilos y datos del component.ts -->
+
 <div class="area-datos">
     <h1>{{nombre}}</h1>
     <div class="datos">
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" 
-            aria-valuemin="0" aria-valuenow="fuerza" aria-valuemax="10" style="width:{{fuerza * 10}}%;">
-              <span class="sr-only">Fuerza</span>
+        <div class="progress mb-4">
+            <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="fuerza"
+            aria-valuemin="0" aria-valuemax="10" [style.width.%]="fuerza * 10">
+              <span class="sr-only">FUERZA</span>
             </div>
         </div>
     
-    <div class="progress">
-        <div class="progress-bar" role="progressbar" 
-        aria-valuemin="0" aria-valuenow="destreza" aria-valuemax="10" style="width:{{destreza * 10}}%;">
-          <span class="sr-only">Destreza</span>
+        <div class="progress mb-4">
+            <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="destreza"
+            aria-valuemin="0" aria-valuemax="10" [style.width.%]="destreza * 10">
+              <span class="sr-only">DESTREZA</span>
+            </div>
+        </div>
+        
+        <div class="progress mb-4">
+            <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="vida"
+            aria-valuemin="0" aria-valuemax="10" [style.width.%]="vida * 10">
+              <span class="sr-only">VIDA</span>
+            </div>
         </div>
     </div>
-    <div class="progress">
-        <div class="progress-bar" role="progressbar" 
-        aria-valuemin="0" aria-valuenow="vida" aria-valuemax="10" style="width:{{vida * 10}}%;">
-          <span class="sr-only">Vida</span>
-        </div>
-    </div>
-</div>
 </div>

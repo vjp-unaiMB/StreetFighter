@@ -1,4 +1,28 @@
-.datos{
-    width: 200px;
+.area-datos{
+    width: 70%;
     height: 400px;
+    min-width: 300px;
+    padding-top: 36px;
 }
+h1{
+    text-align: center;
+    color:white;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+span{
+    font-size: 1.7em;
+}
+.progress{
+    border:solid 3px white;
+    border-radius: none;
+    background: linear-gradient(180deg, #000000,#212121,#7a7a7a,#212121,#000000);/* Creado con https://gradients.app/es/new */                                    
+    height: 60px;
+}
+
+.progress-bar{
+    height: 60px;       
+    background: linear-gradient(90deg, #380000,#8f0000,#cc4700,#e6a800,#fbff00);                          
+    /*background: linear-gradient(180deg, #000000,#8a0000,#d66000,#8a0000,#000000);  Anterior*/                                             
+}
+
