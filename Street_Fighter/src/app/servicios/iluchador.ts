@@ -1,5 +1,5 @@
 export interface ILuchador {
-  nombre: string;
+  id: string;
   retrato: string;
   animacion: string;
   fuerza: number;

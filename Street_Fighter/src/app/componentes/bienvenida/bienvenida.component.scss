@@ -1,0 +1,18 @@
+.fondo{
+    background-image: url(../../../assets/gifIntro.gif);
+    width: 40%;
+    height: 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.contenedor{
+
+    display: flex;
+    
+    justify-content: center; 
+    align-items: center;   
+    height: 70vh;
+    margin-top: 200px;
+}

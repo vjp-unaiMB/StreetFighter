@@ -2,7 +2,7 @@
     width: 70%;
     height: 400px;
     min-width: 300px;
-    padding-top: 36px;
+    padding-top: 12px;
 }
 h1{
     text-align: center;
@@ -26,3 +26,22 @@ span{
     /*background: linear-gradient(180deg, #000000,#8a0000,#d66000,#8a0000,#000000);  Anterior*/                                             
 }
 
+.boton{
+    padding: 10px;
+    background-color: #212121;
+    border: 2px solid rgb(21, 21, 21);
+    border-radius: 5px;
+    color:white;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.compartimento{
+    display: flex;
+    
+    justify-content: center; 
+    align-items: center; 
+
+    
+}

@@ -28,10 +28,13 @@ export class AreaSeleccionComponent implements OnInit {
 
   //Al cargar el componente se ejecuta ngOnInit para obtener los luchadores y llamando al método del servicio y seleccionar el primero. 
   ngOnInit(): void {
-    this.luchadores = this.servicioLuchadores.getluchadores();
-    if (this.luchadores.length > 0) {
-      this.AsignarDatosLuchador(this.luchadores[this.seleccionado]);
-    }
+    this.servicioLuchadores.getLuchadores().subscribe(
+      listaLuchadores => {
+        this.luchadores = listaLuchadores;
+      },
+      error=>console.log(error),
+      () => console.log('Fin del observable')
+    );
   }
 
   //Función para seleccionar un luchador según la dirección del teclado (izquierda o derecha). En el caso de hacer click en uno, cambiará los valores por deefecto del personaje para mostrar
@@ -41,7 +44,7 @@ export class AreaSeleccionComponent implements OnInit {
     this.fuerza = luchador.fuerza;
     this.destreza = luchador.destreza;
     this.vida = luchador.vida;
-    this.nombre = luchador.nombre;
+    this.nombre = luchador.id;
     this.estadoDisplay = "block";
   }
 
@@ -49,15 +52,22 @@ export class AreaSeleccionComponent implements OnInit {
   @HostListener('window:keyup', ['$event'])
   keyEvent(event: KeyboardEvent) {
     if (event.key === 'ArrowLeft') {
-      this.seleccionarLuchador(-1);
+      this.seleccionarTeclas(-1);
     }
     if (event.key === 'ArrowRight') {
-      this.seleccionarLuchador(1);
+      this.seleccionarTeclas(1);
     }
   }
 
-  seleccionarLuchador(direccion: number) {
+  //Asignamos el valor de la tecla seleccionada haciendo el cálculo correspondiente con el valor devuelto por los detectores de eventos de tecla.
+  seleccionarTeclas(direccion: number) {
     this.seleccionado = (this.seleccionado + direccion + this.luchadores.length) % this.luchadores.length;
+    this.AsignarDatosLuchador(this.luchadores[this.seleccionado]);
+  }
+
+  //Activamos la selección manual clickando con el ratón en la casilla que qeramos y cambiamso el valor de la variable de selección por el número que devuelve.
+  seleccionManual(num: number) {
+    this.seleccionado = num;
     this.AsignarDatosLuchador(this.luchadores[this.seleccionado]);
   }
 }

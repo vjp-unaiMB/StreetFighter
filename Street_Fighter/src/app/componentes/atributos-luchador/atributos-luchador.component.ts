@@ -1,8 +1,9 @@
 import { Component, Input } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-atributos-luchador',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './atributos-luchador.component.html',
   styleUrl: './atributos-luchador.component.scss'
 })

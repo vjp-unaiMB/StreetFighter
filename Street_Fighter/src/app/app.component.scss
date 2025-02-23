@@ -10,3 +10,23 @@
     height: 315px;
     margin-top: 200px;  
 }
+nav{
+    background-color: rgb(27, 27, 27);
+    
+}
+
+a{
+    color:white;
+}
+
+.activable:hover{
+    color: #ff5733; /* Color llamativo */
+}
+
+.nav-link.active {
+    color: #ff5733; /* Color llamativo */
+    font-weight: bold;
+  }
+.bienvenida{
+    color:rgb(50, 50, 235);
+}

@@ -1,8 +1,21 @@
 <!--  Designaremos un cuerpo que ocupe el 100% de la pantalla para luego añadirle los estilos de fondo necesarios.Se hará lo mismo con la Imagen -->
-
+<!-- Añadimos el nav con sus rutas -->
 <div class="cuerpo">
   <div class="imagen position-absolute start-50 translate-middle"></div>
+    <nav class="navbar navbar-expand navbar-light mb-4">
+      <ul class="navbar-nav mr-auto">
+          <li class=nav-item>
+            <a class="nav-link bienvenida" [routerLink]="['/bienvenida']" routerLinkActive="[active]">Bienvenida</a>
+          </li>
+          <li class=nav-item >
+              <a class="nav-link activable" [routerLink]="['/seleccion']" [routerLinkActive]="['active']">Selección</a>
+          </li>
+          <li class=nav-item>
+            <a class="nav-link  activable" [routerLink]="['/modificar-retratos']" [routerLinkActive]="['active']">Modificar Retratos</a>
+          </li> 
+      </ul>
+    </nav>
 
   <!--  Invocamos al componente hijo ya importado con su etiqueta prefijada (app-) -->
-  <app-area-seleccion></app-area-seleccion>
+  <router-outlet></router-outlet>
 </div>

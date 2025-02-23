@@ -1,0 +1,8 @@
+<!-- Insertamos este pequeño formulario para poder editar las imagenes de los luchadores -->
+<div>
+    <img [src]="luchador.retrato" alt="">
+    <form [formGroup]="edicionForm" (submit)="actualizarProducto()">
+        <input type="text" class="form-control" id="archivo" formControlName="archivo" placeholder="Código en Base64">
+        <button type="submit" class="btn bg-warning">Enviar</button>
+    </form>
+</div>

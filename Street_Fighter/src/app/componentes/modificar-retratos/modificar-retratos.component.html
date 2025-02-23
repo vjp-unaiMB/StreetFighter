@@ -1,0 +1,8 @@
+<!-- Generaremos todos los luchadores en componentes hijos independientes, pasándolos de 1 en 1 -->
+<div class="area-seleccion container-fluid position-absolute top-50 start-50 translate-middle "> 
+  <div *ngFor="let luchador of luchadores" >
+    <app-item-retrato [luchador] = "luchador"></app-item-retrato>
+  </div>
+</div> 
+
+

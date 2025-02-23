@@ -9,8 +9,8 @@
          class="imagen col-md-6" 
          [ngClass]="{'seleccionado': i === seleccionado}" 
          [style.background-color]="luchador.colorAsociado"
-         (click)="AsignarDatosLuchador(luchador)">
-      <img [src]="luchador.retrato" [alt]="luchador.nombre" class="img-fluida">
+         (click)="seleccionManual(i)">
+      <img [src]="luchador.retrato" [alt]="luchador.id" class="img-fluida">
     </div>
   </div>
 
